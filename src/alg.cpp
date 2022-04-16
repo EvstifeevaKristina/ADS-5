@@ -15,7 +15,6 @@ int prior(char pr) {
     default: return 4;
   }
 }
-
 int NCal(char pr, int x, int y) {
   switch (pr) {
     case '+': return (y + x);
@@ -27,7 +26,6 @@ int NCal(char pr, int x, int y) {
     default: return 0;
   }
 }
-
 std::string infx2pstfx(std::string inf) {
   // добавьте код
   return std::string("");
@@ -72,7 +70,6 @@ std::string infx2pstfx(std::string inf) {
   }
   return outl;
 }
-
 int eval(std::string pref) {
   // добавьте код
   return 0;
