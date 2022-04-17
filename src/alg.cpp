@@ -1,7 +1,5 @@
 // Copyright 2021 NNTU-CS
-#include <string>
-#include <map>
-#include "tstack.h"
+
 
 int prior(char pr) {
   switch (pr) {
@@ -15,7 +13,6 @@ int prior(char pr) {
     default: return 4;
   }
 }
-
 int NCal(char pr, int x, int y) {
   switch (pr) {
     case '+': return (y + x);
@@ -27,7 +24,6 @@ int NCal(char pr, int x, int y) {
     default: return 0;
   }
 }
-
 std::string infx2pstfx(std::string inf) {
   std::string outl;
   char space = ' ';
@@ -70,7 +66,6 @@ std::string infx2pstfx(std::string inf) {
   }
   return outl;
 }
-
 int eval(std::string pref) {
   int endl = 0;
   for (int i = 0; i< pref.size(); i++) {
