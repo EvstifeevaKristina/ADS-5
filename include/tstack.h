@@ -1,6 +1,4 @@
-// Copyright 2021 NNTU-CS
-#ifndef INCLUDE_TSTACK_H_
-#define INCLUDE_TSTACK_H_
+
 
 template<typename T, int size>
 class TStack {
@@ -33,6 +31,6 @@ class TStack {
        return top == size - 1;
      }
 };
-
+#endif  // INCLUDE_TSTACK_H_
 TStack<char, 100> stack11;
 TStack<int, 100> stack22;
