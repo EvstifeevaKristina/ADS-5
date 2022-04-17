@@ -7,7 +7,6 @@ class TStack {
  private:
     T arr[100];
     int top;
-
  public:
     TStack(): top(-1) { }
     T get() {
@@ -34,5 +33,6 @@ class TStack {
      }
 };
 #endif // INCLUDE_TSTACK_H_
+
 TStack<char, 100> stack11;
 TStack<int, 100> stack22;
