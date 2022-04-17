@@ -7,11 +7,12 @@ class TStack {
  private:
     T arr[100];
     int top;
+
  public:
     TStack(): top(-1) { }
     T get() {
     if (!isEmpty())
-       return arr[top];
+      return arr[top];
     else
     throw "Empty!";
     }
@@ -32,6 +33,3 @@ class TStack {
        return top == size - 1;
      }
 };
-
-TStack<char, 100> stack11;
-TStack<int, 100> stack22;
