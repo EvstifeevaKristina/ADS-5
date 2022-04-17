@@ -3,7 +3,7 @@
 #define INCLUDE_TSTACK_H_
 
 template<typename T, int size>
-class TStack {
+
  private:
     T arr[100];
     int top;
@@ -32,7 +32,7 @@ class TStack {
      bool isFull() const {
        return top == size - 1;
      }
-    
+
 #endif  // INCLUDE_TSTACK_H_
 TStack<char, 100> stack11;
 TStack<int, 100> stack22;
