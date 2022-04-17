@@ -33,3 +33,4 @@ class TStack {
        return top == size - 1;
      }
 };
+#ifndef INCLUDE_TSTACK_H_
