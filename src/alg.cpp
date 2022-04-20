@@ -20,6 +20,7 @@ int priority(char ch) {
   }
   return -1;
 }
+
 bool isDigit(std::string pref) {
   for (size_t i = 0; i < pref.size(); ++i) {
     if (pref[i] < '0' || pref[i] > '9')
@@ -27,6 +28,7 @@ bool isDigit(std::string pref) {
   }
   return true;
 }
+
 std::string infx2pstfx(std::string inf) {
   // добавьте код
   return std::string("");
