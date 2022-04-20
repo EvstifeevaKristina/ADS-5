@@ -72,18 +72,36 @@ std::string infx2pstfx(std::string inf) {
 int eval(std::string pref) {
   // добавьте код
   return 0;
-  int endl = 0;
-  for (int i = 0; i< pref.size(); i++) {
-    if (prior(pref[i]) == 4) {
-      stack22.push(pref[i] - '0');
-    } else if (prior(pref[i]) < 4) {
-        int x = stack22.get();
-        stack22.pop();
-        int y = stack22.get();
-        stack22.pop();
-        stack22.push(NCal(pref[i], x, y));
+int eval(std::string post) {
+  TStack <int, 100> ptstack;
+  std::string temp;
+  int oper1 = 0;
+  int oper2 = 0;
+  size_t start = 0, end = 0;
+  for (size_t i = 0; i < post.size(); ++i) {
+    if (post[i] == ' ' || i == post.size()-1) {
+      end = i;
+      if (i == post.size() - 1)
+        end++;
+      temp = post.substr(start, end - start);
+      start = end + 1;
+      if (isDigit(temp)) {
+        ptstack.push(std::stoi(temp));
+      } else {
+        oper2 = ptstack.get();
+        ptstack.pop();
+        oper1 = ptstack.get();
+        ptstack.pop();
+        if (temp == "+")
+          ptstack.push(oper1 + oper2);
+        else if (temp == "-")
+          ptstack.push(oper1 - oper2);
+        else if (temp == "*")
+          ptstack.push(oper1 * oper2);
+        else if (temp == "/")
+          ptstack.push(oper1 / oper2);
+      }
     }
   }
-  endl = stack22.get();
-  return endl;
+  return ptstack.get();
 }
