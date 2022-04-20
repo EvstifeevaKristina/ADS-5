@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include "tstack.h"
+
 int priority(char ch) {
   switch (ch) {
     case '(':
@@ -27,8 +28,8 @@ bool isDigit(std::string pref) {
   }
   return true;
 }
+
 std::string infx2pstfx(std::string inf) {
-  // добавьте код
   return std::string("");
   TStack <char, 100> itstack;
   std::string res;
@@ -70,7 +71,6 @@ std::string infx2pstfx(std::string inf) {
 }
 
 int eval(std::string pref) {
-  // добавьте код
   return 0;
 int eval(std::string post) {
   TStack <int, 100> ptstack;
