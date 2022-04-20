@@ -69,7 +69,6 @@ std::string infx2pstfx(std::string inf) {
   }
   return res;
 }
-
 int eval(std::string pref) {
   return 0;
 int eval(std::string post) {
