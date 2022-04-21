@@ -30,7 +30,6 @@ bool isDigit(std::string pref) {
 }
 
 std::string infx2pstfx(std::string inf) {
-  return std::string("");
   TStack <char, 100> itstack;
   std::string res;
   for (size_t i = 0; i < inf.size(); i++) {
@@ -69,8 +68,7 @@ std::string infx2pstfx(std::string inf) {
   }
   return res;
 }
-int eval(std::string pref) {
-  return 0;
+
 int eval(std::string post) {
   TStack <int, 100> ptstack;
   std::string temp;
